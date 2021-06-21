@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Broken Link scanner by b4gg3r"
-echo "Usage: blscanner targeturl"
+echo "Usage: blscan targeturl"
 echo ""
 echo "Running hakrawler"
 hakrawler -url $1 -depth 3 -plain | grep -Ev -e '\.js' -e '\.css' -e '\.pdf' | sort -u | tee urls
